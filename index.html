@@ -1491,6 +1491,50 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .back-top:hover { background: var(--clr-gold); color: var(--clr-white); }
 
 /* ============================================================
+   ICON SIZING & PADDING
+   Keeps every icon glyph proportionate to (and padded within)
+   its container instead of stretching edge-to-edge.
+   ============================================================ */
+.hero-media-badge-icon img,
+.about-feat-icon img,
+.contact-item-icon img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+.service-icon img {
+  width: 46%;
+  height: 46%;
+  object-fit: contain;
+}
+.footer-social img {
+  width: 72%;
+  height: 72%;
+  object-fit: contain;
+}
+.contact-map-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.footer-contact-line .icon img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-top: 1px;
+}
+.float-btn img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+.back-top img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1100px) {
@@ -1529,7 +1573,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-cta { flex-direction: column; }
   .hero-cta .btn { text-align: center; justify-content: center; }
   .hero-media-badge { left: 10px; max-width: calc(100% - 20px); }
+  .about-img-badge { right: -8px; padding: 14px 16px; }
   .testimonial-slider { padding: 40px 24px; }
+}
+@media (max-width: 480px) {
+  .nav-right .btn-gold { display: none; }
+  .nav-logo-name { font-size: 1.2rem; }
+  .nav-logo-sub { font-size: 0.6rem; letter-spacing: 0.14em; }
+  .float-btns { right: 14px; bottom: 78px; gap: 8px; }
+  .float-btn { width: 46px; height: 46px; font-size: 1.05rem; }
+  .float-btn img { width: 20px; height: 20px; }
+  .back-top { right: 14px; bottom: 14px; width: 40px; height: 40px; }
 }
 </style>
 </head>
